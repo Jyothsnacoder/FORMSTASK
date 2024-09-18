@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="demo(event)">
+    <br>  <label>First Name:</label>
+    <br> <input type="text" id="ip1" required/><br>
+
+  <br> <label>Last Name:</label>
+   <br>  <input type="text" id="ip2" required/><br>
+
+  <br>   <label>Batch No:</label>
+    <br>  <input type="text" id="ip3" required/><br>
+
+    <br>   <label>Qualification:</label>
+    <br>  <input type="text" id="ip4" required/><br>
+
+    <br>   <label>Blood Group:</label>
+    <br>  <input type="text" id="ip5" required/><br>
+
+    <br>   <label>Address:</label>
+    <br>  <input type="text" id="ip6" required/><br>
+
+    <br>   <label>Location:</label>
+    <br>  <input type="text" id="ip7" required/><br>
+     <br> <input type="submit"/>
+      </form>
+     <div id="result"></div>
+     
+     </div>
+     <script>
+        function demo(event){
+            event.preventDefault();
+            let ip1=document.getElementById("ip1").value;
+            let ip2=document.getElementById("ip2").value;
+            let ip3=document.getElementById("ip3").value;
+            let ip4=document.getElementById("ip4").value;
+            let ip5=document.getElementById("ip5").value;
+            let ip6=document.getElementById("ip6").value;
+            let ip7=document.getElementById("ip7").value;
+            
+            let result=document.getElementById("result");
+
+            result.innerHTML=`
+            <h2>ID CARD</h2>
+            <h3>FIRST NAME: ${ip1}</h3>
+            <h3>LAST NAME: ${ip2}</h3>
+            <h3>BATCH NO: ${ip3}</h3>
+            <h3>QUALIFICATION: ${ip4}</h3>
+            <h3>BLOOD GROUP: ${ip5}</h3>
+            <h3>ADDRES: ${ip6}</h3>
+            <h3>LOCATION: ${ip7}</h3>
+            `
+        }  
+         result.style.border="5px solid"
+         result.style.height="450px"
+         result.style.width="450px"
+
+
+         let img=document.createElement("img")
+img.setAttribute("src","./assets/jyo.jpg")
+div1.appendChild(img)
+img.setAttribute("height","200")
+img.style.margin="50px 0px 0px 115px"
+img.style.borderRadius=("50px")
+div1.style.border="5px solid"
+
+     </script>
+
+</form> 
+</body>
+</html>
